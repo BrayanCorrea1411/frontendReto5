@@ -1,7 +1,7 @@
 function autoInicioCategoria(){
     console.log("se esta ejecutando")
     $.ajax({
-        url:"http://155.248.202.105:8080/api/Category/all",
+        url:"http://129.151.119.141:8080/api/Category/all",
         type:"GET",
         datatype:"JSON",
         success:function(respuesta){
@@ -18,8 +18,7 @@ function autoInicioCategoria(){
 //Manejador GET
 function traerInformacionDisfraz() {
     $.ajax({
-        url:"http://155.248.202.105:8080/api/Costume/all",
-        //url: "http://localhost:8080/api/Skate/all",
+        url:"http://129.151.119.141:8080/api/Costume/all",
         type: "GET",
         datatype: "JSON",
         success: function (response) {
@@ -61,8 +60,7 @@ function pintarRespuestaDisfraz(response){
 function cargarDatosDisfraz(id) {
     $.ajax({
         dataType: 'json',
-        url:"http://155.248.202.105:8080/api/Costume/"+id,
-        //url: "http://localhost:8080/api/Skate/" + id,
+        url:"http://129.151.119.141:8080/api/Costume/"+id,
         type: 'GET',
 
         success: function (response) {
@@ -103,8 +101,8 @@ function agregarDisfraz() {
             $.ajax({
                 type: "POST",
                 contentType: "application/json",
-                url:"http://155.248.202.105:8080/api/Costume/save",
-                //url: "http://localhost:8080/api/Skate/save",
+                url:"http://129.151.119.141:8080/api/Costume/save",
+               
                 data: dataToSend,
                 datatype: 'json',
 
@@ -141,8 +139,7 @@ console.log(dataToSend);
         {
             dataType: 'json',
             data: dataToSend,
-            url:"http://155.248.202.105:8080/api/Costume/"+idElemento,
-            //url: "http://localhost:8080/api/Skate/" + idElemento,
+            url:"http://129.151.119.141:8080/api/Costume/"+idElemento,
             type: 'DELETE',
             contentType: "application/JSON",
             success: function (response) {
@@ -180,8 +177,8 @@ function actualizar(idElemento) {
             datatype: 'json',
             data: dataToSend,
             contentType: "application/JSON",
-            url:"http://155.248.202.105:8080/api/Costume/update",
-            //url: "http://localhost:8080/api/Skate/update",
+            url:"http://129.151.119.141:8080/api/Costume/update",
+           
             type: "PUT",
 
             success: function (response) {

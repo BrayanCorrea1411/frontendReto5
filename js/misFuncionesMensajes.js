@@ -1,7 +1,7 @@
 function autoInicioRelacionCliente(){
     
     $.ajax({
-        url:"http://155.248.202.105:8080/api/Client/all",
+        url:"http://129.151.119.141:8080/api/Client/all",
         type:"GET",
         datatype:"JSON",
         success:function(respuesta){
@@ -18,7 +18,7 @@ function autoInicioRelacionCliente(){
 function autoInicioCostume(){
 
     $.ajax({
-        url:"http://155.248.202.105:8080/api/Costume/all",
+        url:"http://129.151.119.141:8080/api/Costume/all",
         type:"GET",
         datatype:"JSON",
         success:function(respuesta){
@@ -37,7 +37,7 @@ function autoInicioCostume(){
 function autoInicioMensajes(){
     console.log("se esta ejecutando")
     $.ajax({
-        url:"http://155.248.202.105:8080/api/Message/all",
+        url:"http://129.151.119.141:8080/api/Message/all",
         type:"GET",
         datatype:"JSON",
         success:function(respuesta){
@@ -89,7 +89,7 @@ function guardarInformacionMensajes(){
         dataType: 'JSON',
         data: JSON.stringify(var2),
         
-        url:"http://155.248.202.105:8080/api/Message/save",
+        url:"http://129.151.119.141:8080/api/Message/save",
        
         
         success:function(response) {
@@ -124,7 +124,7 @@ function actualizarInformacionMensaje(idElemento){
     console.log(myData);
     let dataToSend=JSON.stringify(myData);
     $.ajax({
-        url:"http://155.248.202.105:8080/api/Message/update",
+        url:"http://129.151.119.141:8080/api/Message/update",
         type:"PUT",
         data:dataToSend,
         contentType:"application/JSON",
@@ -147,7 +147,7 @@ function borrarMensaje(idElemento){
     let dataToSend=JSON.stringify(myData);
     console.log(dataToSend);
     $.ajax({
-        url:"http://155.248.202.105:8080/api/Message/"+idElemento,
+        url:"http://129.151.119.141:8080/api/Message/"+idElemento,
         type:"DELETE",
         data:dataToSend,
         contentType:"application/JSON",
